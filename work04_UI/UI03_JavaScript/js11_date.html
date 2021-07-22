@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date</title>
+
+<script type="text/javascript">
+    window.onload = function(){
+        document.getElementsByTagName("button")[1].onclick = testDate02;
+    }
+
+    function testDate01(){
+        var doc= document.getElementById("today");
+        
+        var date = new Date(); //오늘날짜
+        
+        doc.innerHTML += date.toDateString()+"<br>";
+        doc.innerHTML += date.toLocaleDateString() + "<br>";
+        doc.innerHTML += date.toLocaleString() + "<br>";
+        doc.innerHTML += date.toLocaleTimeString() + "<br>";
+    }
+
+    function testDate02(){
+        var doc = document.getElementById("today");
+        var dayOfWeek = ['일','월','화','수','목','금','토'];
+        
+        var date = new Date();
+        var year = date.getFullYear();
+        var month =date.getMonth()+1;
+        var day = date.getDate();
+        var week = date.getDay();
+
+        doc.innerHTML += year+"/"+month +"/"+day+"/"+dayOfWeek[week];
+        
+    }
+    function testDate03(){
+        var year = 2021;
+        var month = 2;
+        var day = 19;
+        
+        var date = new Date(year,month-1,day);
+        
+        
+        var doc=document.getElementById("specific").innerHTML += date; 
+    }
+
+    function testDate04(){
+        //지정날짜
+        var dates = document.getElementById("dates").value;
+        //경과일
+        var inputDate = document.getElementById("inputDate").value;
+        
+        var date = new Date(dates);
+
+        date.setDate(date.getDate()+parseInt(inputDate));
+
+        document.getElementById("result").value = date.toLocaleDateString();
+    }
+    </script>
+</head>
+<body>
+    <h1>오늘 날짜 출력하기</h1>
+    <span id = "today"></span><br>
+    <button onclick="testDate01();">오늘날짜</button>
+    <button>오늘 날짜 표현</button>
+
+    <h1>특정 날짜 출력하기</h1>
+    <span id="specific"></span>
+    <button onclick="testDate03();">특정 날짜</button>
+
+    <h1>경과 날짜 구하기</h1>
+    <label>지정 날짜</label> <input type="date" id="dates" size="50"><br>
+    <label>경과일</label><input type="number" id="inputDate"><br>
+    <label>경과 후 날짜</label><input type="text" id="result" readonly="readonly"><br>
+    <button onclick="testDate04();">경과날짜</button>
+
+</body>
+</html>

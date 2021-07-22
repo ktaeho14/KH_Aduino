@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼 태그</title>
+</head>
+<body>
+    <h1>폼 관련 태그</h1>
+    <p>form 태그는 html에서 사용자가 입력할 수 있는 양식을 제공하는 태그이다.<br>
+    form태그 내의 input태그들을 통해 사용자가 입력한 정보를 서버로 넘기는 역할을 한다.<br>
+    </p>
+
+    <form>
+        검색할 내용 : <input type="text" size="20" name="search"> <br>
+        <input type="submit" value="검색">
+    </form>
+
+    <hr>
+
+    <form>
+        <fieldset>
+            <legend>필드셋의 제목을 작성하는 부분</legend>
+            <label>입력1:</label><input type="text"><br>
+            <label>입력2:</label><input type="text"><br>
+            <label>입력3:</label><input type="text"><br>
+        </fieldset>
+        
+    </form>
+
+    <hr>
+    <form>
+        <h2>text와 관련된 input 태그</h2>
+        <h3>type="text"</h3>
+        <p>-한 줄 짜리 텍스트를 입력할 수 있는 텍스트 상자</p>
+        <label>아이디: </label><input type="text" name="userid" 
+        maxlength="15" value="khacademy" placeholder="아이디를 입력하세요">
+        <br>
+        <h3>type="password"</h3>
+        <p>-비밀번호를 입력할 수 있는 텍스트 상자</p>
+        <label>비밀번호: </label><input type="password" name="userpwd">
+
+        <h3>type="search, url, email, tel</h3>
+        검색: <input type="search" placeholder="검색할 내용 입력"><br>
+        홈페이지: <input type="url" value="https:"><br>
+        이메일: <input type="email" placeholder="이메일 입력"><br>
+        전화번호: <input type="tel" placeholder="전화번호를 입력하세요"><br>
+
+
+        <br><br>
+        <input type="submit" value="전송"><input type="reset" value="취소">
+    </form>
+
+
+    <form>
+        <h2>숫자와 관련된 input 태그</h2>
+        <h3>type="number"</h3>
+        수량: <input type="number" name="amount" min="0" max="10" value="5" step="3">
+        <h3>type="range"</h3>
+        점수:<input type="range" name="point" min="0" max=100 value="30" step="10">
+        <br><br>
+        <input type="submit" value="전송">
+
+    </form>
+
+    <hr>
+    <form>
+        <h2>날짜 관련 input 태그"</h2>
+        date : <input type="date">
+        month : <input type="month">
+        week : <input type="week">
+        time : <input type="time">
+    </form>
+
+    <hr>
+    <form>
+        <h2>라디오버튼, 체크박스</h2>
+        <h3>type="radio"</h3>
+        <label>성별:</label><input type="radio" id="male" name="gender" value="M"><label for="male">남자</label>
+                            <input type="radio" id="famale" name="gender" value="F" checked><label for="female">여자</label>
+        <h3>type="checkbox"</h3>
+        취미:
+        <input type="checkbox" id="baseball" name="hobby" value="baseball"><label for="baseball">야구</label>  &nbsp;        
+        <input type="checkbox" id="football" name="hobby" value="football" checked><label for="football">축구</label>  &nbsp;
+        
+        <br><br>
+        <input type="submit" value="전송">
+    </form>
+
+        <form>
+            <h2>그 밖에 input 태그</h2>
+            <h3>type="color"</h3>
+            색상선택: <input type="color" name="color">
+            <h3>type="file</h3>
+            파일선택: <input type="file" name="upfile">
+            <h3>type="hidden"</h3>
+            안보임: <input type="hidden" name="hiddenValue" value="1">
+            <br><br>
+            <input type="submit" value="전송">
+        </form>
+        
+        <!-- select태그 와 option태그 -->
+        <form>
+            <h2>select태그와 option태그</h2>
+            국적:
+            <select size="2" multiple>
+                <option value="ko">한국</option>
+                <option value="us">미국</option>
+                <option value="uk">영국</option>
+                <option value="aa">기타</option>
+            </select>
+            
+        <br><br>
+        <select>
+            <optgroup label="서울">
+                <option>강남</option>
+                <option>역삼</option>
+                <option>사당</option>
+            </optgroup>
+            <optgroup label="경기">
+                <option>수원</option>
+                <option>안양</option>
+            </optgroup>    
+        </select>
+
+        <input type="submit" value="전송">&nbsp;<input type="reset" value="취소">            
+        </form>
+
+        <!-- textarea -->
+        <form>
+            <textarea cols="30" rows="30" readonly></textarea>
+            <input type="submit">
+        </form>
+
+
+
+</body>
+</html>

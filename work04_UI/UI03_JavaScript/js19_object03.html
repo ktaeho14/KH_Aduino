@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+    
+    .area{
+        height: 150px;
+        background-color: lightgray;
+        border: 1px solid black;
+    }
+    </style>
+</head>
+<body>
+    <h3>캠슐화</h3>
+    <button onclick="test1();">확인</button>
+    <div id="area1" class="area"></div>
+    <script type="text/javascript">
+        function Food(pizza , price, brand){
+            var pizzaName  = pizza;
+            var pizzaPrice = price;
+            var pizzaBrand = brand;
+
+            this.getPizzaName = function(){
+                return pizzaName;
+            }
+            this.getPizzaPrice = function(){
+                return pizzaPrice;
+            }
+            this.getPizzaBrand = function(){
+                return pizzaBrand;
+            }
+
+        }
+
+        function test1(){
+            var pizza = '불고기피자';
+            var price = '12900';
+            var brand = '반올림샾';
+
+            var eatPizza = new Food(pizza,price,brand)
+
+            console.log(eatPizza);
+            console.log(eatPizza.getPizzaName());
+
+            var doc = document.getElementById("area1");
+            doc.innerHTML += "피자: " + eatPizza.getPizzaName()+"<br>";
+            doc.innerHTML += "가격: " + eatPizza.getPizzaPrice() + "<br>";
+            doc.innerHTML += "브랜드: " + eatPizza.getPizzaBrand() + "<br>";
+        }
+    </script>
+</body>
+</html>

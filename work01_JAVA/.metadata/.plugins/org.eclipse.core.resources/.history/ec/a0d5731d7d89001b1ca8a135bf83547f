@@ -1,0 +1,32 @@
+package firstProject.com.test;
+
+import java.util.Scanner;
+
+public class practice {
+
+	public static void main(String[] args) {
+		//구구단의 단을 입력하면 그단을 출력하게 하시오
+		Scanner sc = new Scanner(System.in);
+		System.out.println("단수를 입력해 주세요");
+		
+		int su = sc.nextInt();
+		
+		
+		for(int i = 1; i<=su; i++) {
+				
+			for(int j = 1; j<su; j++) {
+				System.out.println(i + " * " + j + " = " + i*j);
+			}System.out.println();
+		}
+		
+		
+		
+		
+		
+	}
+	
+		
+		
+	
+
+}

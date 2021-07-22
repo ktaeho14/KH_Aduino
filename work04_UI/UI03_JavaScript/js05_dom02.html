@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom2</title>
+
+<!-- CSS  -->
+<style type="text/css">
+    .area{
+        width: 300px;
+        height: 100px;
+        border: 1px solid red;
+    }
+</style>
+<!-- 자바스크립트 -->
+<script type="text/javascript">
+    function searchId(){
+        var doc=document.getElementById("area1");
+        doc.style.backgroundColor="yellow";
+        doc.innerHTML += "아이디로 접근 성공!!<br>";
+    }
+
+    function searchTagName(){
+        var doc=document.getElementsByTagName("li")
+        
+        var color = 50;
+
+        for(var i=0; i<doc.length; i++){
+            doc[i].style.backgroundColor="rgb(130,220,"+color+")";
+            color +=50;
+        }
+
+        console.log(doc.length);
+        
+    }
+
+    function searchName(){
+        var doc=document.getElementsByName("hobby");
+        
+
+        for(var i=0;i<doc.length;i++){
+            if(doc[i].checked==true){
+                document.getElementById("area2").innerHTML += doc[i].value + "선택함 <br>";
+            }
+        }
+    }
+    function readValue(){
+        var doc =document.getElementById("username");
+        if(doc.value==""||doc.value.legnth ==0){
+            alert("이름을 입력하세요!!!!");
+            doc.focus();
+        }else{
+            document.getElementById("area3").innerHTML= doc.value;
+        }
+    }
+</script>
+
+</head>
+<body>
+    <h1>HTML태그에 접근</h1>
+    <h3>id로 탐색</h3>
+    <div id="area1" class="area"></div>
+    <button onclick="searchId();">아이디로 탐색</button>
+    
+    <hr>
+
+    <h3>태그명으로 탐색</h3>
+    <ul>
+        <li>목록1</li>
+        <li>목록2</li>
+        <li>목록3</li>
+        <li>목록4</li>
+        <li>목록5</li>
+    </ul>
+    <button onclick="searchTagName();">태그명으로 검색</button>
+    
+    <hr>
+    
+    <h3>name으로 탐색</h3>
+    <form>
+        <fieldset>
+            <legend>취미</legend>
+            <table>
+                <tr>
+                    <td><input type="checkbox" name="hobby" value="game" id="game"><label for="game">게임하기</label></td>
+                    <td><input type="checkbox" name="hobby" value="music" id="music"><label for="music">음악듣기</label></td>
+                    <td><input type="checkbox" name="hobby" value="movie" id="movie"><label for="movie">영화보기</label></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="hobby" value="book" id="book"><label for="book">독서하기</label></td>
+                    <td><input type="checkbox" name="hobby" value="sleep" id="sleep"><label for="sleep">잠자기</label></td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+    <div id="area2" class="area"></div>
+    <button onclick="searchName();">name으로 탐색</button>
+
+
+    <h3>text박스의 value값 읽어오기</h3>
+    <form>
+        이름: <input type="text" name="username" id="username"> <br>
+        <input type="button" onclick="readValue();" value="확인">
+    </form>
+    <div id="area3" class="area"></div>
+
+
+</body>
+</html>

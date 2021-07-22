@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style type="text/css">
+.navi{
+    list-style: none;
+    height: 40px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.navi li{
+    float: left;
+    position: relative;
+    padding: 0px;
+    line-height: 40px;
+    background-color: teal;
+}
+.navi li a{
+    display: block;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 5px 25px;
+    color: tomato;
+    text-decoration: none;
+}
+.navi li a:hover{
+    color: magenta;
+}
+.navi li ul{
+    list-style: none;
+    position: absolute;
+    left: 0px;
+    width: 180px;
+    background-color: turquoise;
+    padding: 0px;
+    margin: 0px;
+    opacity: 0;
+
+}
+
+.navi li:hover ul{
+    opacity: 1;
+}
+.navi li ul li{
+    float: none;
+    background: none;
+}
+.navi li:hover ul li{
+    height: 30px;
+    line-height: 30px;
+    padding: 5px 0px;
+}
+
+.navi li ul li a{
+    color: gray;
+}
+.navi li ul li a:hover{
+    background-color: hotpink;
+}
+.navi li ul{
+    transition: all 0.5s;
+}
+
+</style>
+</head>
+<body>
+    <h1>navMenu</h1>
+    <hr>
+    <ul class="navi">
+        <li><a href="http://www.naver.com">Home</a></li>
+        <li>
+            <a href="http://www.naver.com">Java</a>
+            <ul>
+                <li><a href="http://www.google.com">변수</a></li>
+                <li><a href="http://www.google.com">메소드</a></li>
+                <li><a href="http://www.google.com">제어문</a></li>
+                <li><a href="http://www.google.com">객체</a></li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="http://www.naver.com">게시판</a>
+            <ul>
+                <li><a href="http://www.google.com">Q&A</a></li>
+                <li><a href="http://www.google.com">방명록</a></li>
+            </ul>
+        </li>
+        <li><a href="http://www.naver.com">고객센터</a></li>
+    </ul>
+</body>
+</html>

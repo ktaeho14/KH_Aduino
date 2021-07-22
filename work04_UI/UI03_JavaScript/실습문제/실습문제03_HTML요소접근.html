@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+#area {
+	width: 400px;
+	height: 150px;
+	background: #ffff99;
+	border: 1px solid #6666ff;
+}
+
+</style>
+
+<script type="text/javascript">
+function printValue(){
+	var name = document.getElementsByTagName("input")[0].value;
+	var productName = document.getElementById("pname").value;
+	var price = document.getElementsByName("price")[0].value;
+
+	var doc = document.getElementById("area");
+	doc.innerHTML = "구입자: " + name +"님<br>";
+	doc.innerHTML += "구입상품: " + productName+"<br>";
+	doc.innerHTML += "구매가격: " + price + "만원";
+	
+}
+
+
+
+
+/*
+	function printValue(){
+	var doc=document.getElementsByTagName("input");
+	document.getElementById("area").innerHTML+=doc[0].value+"<br>";
+
+	var doc=document.getElementById("pname");
+	document.getElementById("area").innerHTML+=doc.value+"<br>";
+
+	var doc=document.getElementsByName("price");
+	document.getElementById("area").innerHTML+=doc[0].value;
+}
+
+*/
+</script>
+</head>
+<body>
+	<h2>HTML 태그에 접근 테스트</h2>
+	단, 구매자는 태그 이름으로 접근, 상품명은 아이디로 접근, 구매가격은 name값으로 접근할 것
+	<br><br>
+	<label>구매자 : </label>
+	<input type="text" placeholder="구매자의 이름을 입력하세요.">
+	<br>
+	<br>
+	<label>상품명 : </label>
+	<input type="text" id="pname" placeholder="구매 상품명을 입력하세요">
+	<br>
+	<br>
+	<label>가격 : </label>
+	<input type="text" name="price" placeholder="구매 가격을 입력하세요.">
+	<br>
+	<br>
+	<button onclick="printValue();">입력값 출력하기</button>
+	<br>
+	<br>
+	<div id="area"></div>
+	
+	
+</body>
+</html>

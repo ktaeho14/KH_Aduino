@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style type="text/css">
+.area1{
+    border: 1px solid red;
+    height: 400px;
+}
+
+</style>
+<script type="text/javascript">
+function showMath(){
+    doc=document.getElementById("area");
+    var num= -123;
+
+    doc.innerHTML += "절대값: " + Math.abs(num)+"<br>";
+
+    doc.innerHTML += "반올림: " + Math.round(123.55)+"<br>";
+    doc.innerHTML += "내림: " + Math.floor(123.55)+"<br>";
+    doc.innerHTML += "올림: " + Math.ceil(123.45)+"<br>"; 
+}
+</script>
+
+
+</head>
+<body>
+    <h1>Math</h1>
+    <button onclick="showMath();">숫자 처리 메소드</button>
+    <div id="area" class="area1"></div>
+</body>
+</html>

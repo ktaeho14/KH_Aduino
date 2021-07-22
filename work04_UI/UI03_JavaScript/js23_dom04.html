@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style type="text/css">
+    img{
+        vertical-align: middle;
+        width: 300px;
+        height: 300px;
+        
+    }
+    a{
+        font-size: 30px;
+        text-decoration: none;
+    }
+    </style>
+
+    <script type="text/javascript">
+        window.onload = function(){
+            var count = 1;
+
+            var img = document.querySelector("img");
+            var a = document.querySelectorAll("a");
+
+            //왼쪽 a 태그 클릭
+            a[0].onclick = function(){
+                var imgAlt = img.getAttribute("alt");
+                if(imgAlt == "img01"){
+                    count = 3;
+                    img.setAttribute("alt","img03");
+                    img.setAttribute("src","image/img03.png");
+                }else{
+                    img.setAttribute("alt","img0"+(--count));
+                    img.setAttribute("src","image/img0"+count+".png");
+                }
+            }
+
+            //오른쪽 a 태그 클릭
+            a[1].onclick = function(){
+                var imgAlt = img.getAttribute("alt");
+                if(imgAlt=="img03"){
+                    count = 1;
+                    img.setAttribute("alt","img01");
+                    img.setAttribute("src","image/img01.png");
+                }else{
+                    img.setAttribute("alt","img0"+(++count));
+                    img.setAttribute("src","image/img0"+count+".png");
+                }
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <div>
+        <a href="#" id="lt">◀</a>
+            <img alt="img01" src="image/img01.png">
+        <a href="#" id="rt">▶</a>
+
+    </div>
+</body>
+</html>

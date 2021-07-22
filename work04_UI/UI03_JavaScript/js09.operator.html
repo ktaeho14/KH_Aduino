@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style type="text/css">
+        .box{
+            border: 2px solid blue;
+            width: 600px;
+            height: 400px;
+        }
+    </style>
+    <script type="text/javascript">
+function opTest(){
+    //==,===
+
+    var check1 = 1;
+    var check2 = "1";
+
+    var doc=document.getElementById("area");
+    doc.innerHTML += "check1 == 1: " +(check1 == 1)+"<br>";
+    doc.innerHTML += "check2 === 1: " +(check2 === 1)+"<br>";
+
+    doc.innerHTML += "check1 != 1: " + (check1 != 1)+"<br>";
+    doc.innerHTML += "check2 != 1: " + (check2 != 1)+"<br>";
+    doc.innerHTML += "check2 !== 1: " + (check2 !== 1)+"<br>";
+}    
+
+    </script>
+
+</head>
+<body>
+    <h3>===연산자와 !==연산자</h3>
+    <button onclick="opTest();">확인하기</button>
+    <div id="area" class="box"></div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+package firstProject.com.test;
+
+public class practice {
+
+	public static void main(String[] args) {
+		//구구단의 단을 입력하면 그단을 출력하게 하시오
+		Scanner sc = new Scanner(System.in);
+		
+		
+		
+	}
+	
+		
+		
+	
+
+}

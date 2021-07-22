@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+   $(function(){
+    $("tr").click(function(){
+       var no = $(this).children().eq(0).text();
+       var title = $(this).children().eq(1).text();
+       var write = $(this).children().eq(2).text();
+
+       $("span").eq(0).text("선택한 게시물: "+no+"/");
+       $("span").eq(1).text(title+"/");
+       $("span").eq(2).text(write);
+        
+    });
+   });
+ 
+    
+    </script>
+</head>
+<body>
+    <table border="1px">
+        <tr>
+            <th>번호</th>
+            <th>제목</th>
+            <th>작성자</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>첫 번째 게시물 입니다</td>
+            <td>홍길동</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>두 번째 게시물 입니다</td>
+            <td>홍길동</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>세 번째 게시물 입니다</td>
+            <td>홍길동</td>
+        </tr>
+    </table>
+
+    <div>
+        <span>선택한 게시물: </span><span>/</span><span>/</span>
+    </div>
+</body>
+</html>

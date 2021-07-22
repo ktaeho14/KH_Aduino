@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클로저</title>
+
+<script type="text/javascript">
+
+
+</script>
+</head>
+<body>
+    <h1>클로저</h1>
+    <h3>지역변수의 스코프</h3>
+    <p>함수 내부에 선언된 변수는 내부에서만 사용 가능.</p>
+    <script type="text/javascript">
+        function test1(name){
+            //지역변수
+            var output = 'Hello' + name + "님!!";
+        }
+        alert(output);
+        alert('123');
+    </script>
+    <h3>클로저</h3>
+    <p>지역 변수는 함수가 실행 될 때 생성되고 종료될 때 사라진다.<br>
+    하지만 함수를 리턴하는 함수(클로저)를 이용하면 규칙을 위반할 수 있다.
+
+    </p>
+    <button onclick="test2('이창진')();">확인!</button>
+    <script type="text/javascript">
+        function test2(name){
+            var output = 'Hello' + name + "님!!";
+            function returnfun(){
+                alert(output);
+
+            }
+            return returnfun;
+        }
+    </script>
+
+    <h3>여러 개의 클로저</h3>
+    <button onclick="test3(this);">Javascript</button>
+    <script type="text/javascript">
+        function test3(button){
+            var subject = button.innerHTML;
+            alert(test4(subject)());
+        }
+        function test4(subject){
+            var output = '오늘 배우는 내용은 ' + subject + '입니다.';
+            return function(){
+                return output;
+            }
+        }
+    </script>
+
+    <h3>클로저 테스트</h3>
+    <label for="am">오전강의</label>
+    <input type="text" id="am" value=""> <input type="button" value="클릭" onclick="amEdu();">
+    <br>
+    <label for="pm">오후강의</label>
+    <input type="text" id="pm" value=""><input type="button" value="클릭" onclick="pmEdu(pm.value);">
+    
+    <script type="text/javascript">
+        function closureTest(val){
+            var msg = "이군요!!";
+            function addVal(){
+                alert(val+" "+msg);
+            }
+            return addVal;
+        }
+
+        var amEdu = closureTest("Spring");
+        
+        function pmEdu(val){
+            closureTest(val)();
+        }
+    
+    
+    
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+<script type="text/javascript">
+    //객체 작성1
+    function myClassS(){
+        this.name = "KH정보교육원"; //외부에서 접근가능
+        var name02 = "S강의장";
+        this.getName02=function(){
+            return name02;
+        }
+    }
+
+
+    function objTest(){
+        var cls = new myClassS();
+        //alert(cls.name);
+        //alert(name02);
+        alert(cls.getName02());
+    
+    
+    }
+
+    //객체 작성2
+    var myClassS_2 = {
+        name:"kh academy",
+        print:function(){
+            alert(myClassS_2.name + " : print" );
+            return myClassS_2.name;
+        }
+    }
+
+    myClassS.prototype.printName=function(){
+        var abc = "메롱";
+        alert(this.name+"," +this.getName02()+":prototype"+abc);
+    }
+
+    
+    function objTest(){
+        var cls = new myClassS();
+        //alert(cls.name);
+        //alert(name02);
+        //alert(cls.getName02());
+        
+        
+
+        var cls2 = new myClassS();
+        cls2.name = "케이에이치";
+        
+        console.log(cls);
+        console.log(cls2);
+
+        cls.printName();
+        cls2.printName();
+        //alert(myClassS_2.name);
+        //myClassS_2.print();
+    }
+
+    
+</script>
+
+</head>
+<body>
+    <pre>
+        객체: 관련된 데이터와 함수의 집합이다.
+        객체의 구성
+        -메소드 : 기능 정의
+        -속성  : 객체 내부 데이터
+        -this :  객체 내부의 메소드나 속성을 정의할 때 사용
+        -프로토타입 : 객체의 확정
+    </pre>
+
+    <button onclick="objTest();">객체</button>
+</body>
+</html>

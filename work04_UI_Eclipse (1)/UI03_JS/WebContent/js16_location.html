@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Location</title>
+<script type = "text/javascript">
+function locTest(){
+	// location.href = "https://www.google.com";
+	
+	// 페이지 이동
+	// location.assign("https://www.naver.com");
+	
+	// 페이지 이동
+	// location.replace("https://www.naver.com");
+	
+	/*
+	replace / assign 의 차이
+	replace 와 assign 은 둘 다 페이지를 다른 URL 로 이동시키지만 히스토리를 남기느냐 남기지 않느냐의 차이를 갖고 있다.
+    assign 은 다음 페이지로 이동하면서 현재 페이지를 히스토리에 남기고 replace 는 남기지 않는다.
+       이는 브라우저의 뒤로가기를 눌렀을 때 그 차이를 확실히 알 수 있다.
+	*/
+	
+	// 페이지 새로고침
+	location.reload();
+}
+</script>
+</head>
+<body>
+	<a href = "http://www.google.com">구글!</a>
+	<button onclick = "locTest();">이동</button>
+</body>
+</html>

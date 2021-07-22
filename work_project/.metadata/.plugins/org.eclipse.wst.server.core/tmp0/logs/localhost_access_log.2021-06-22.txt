@@ -1,0 +1,17 @@
+127.0.0.1 - - [22/Jun/2021:21:21:33 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [22/Jun/2021:21:21:35 +0900] "GET /semi_project/protected.jsp HTTP/1.1" 200 4540
+0:0:0:0:0:0:0:1 - - [22/Jun/2021:21:23:42 +0900] "GET /semi_project/protected.jsp HTTP/1.1" 200 3822
+127.0.0.1 - - [22/Jun/2021:21:30:59 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [22/Jun/2021:21:31:00 +0900] "GET /semi_project/ProtectedMenu1.jsp HTTP/1.1" 200 3839
+0:0:0:0:0:0:0:1 - - [22/Jun/2021:21:31:04 +0900] "GET /semi_project/controller.do?command='menu1' HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [22/Jun/2021:21:32:45 +0900] "GET /semi_project/index.jsp HTTP/1.1" 200 219
+0:0:0:0:0:0:0:1 - - [22/Jun/2021:21:32:45 +0900] "GET /semi_project/controller.do?command='menu1' HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [22/Jun/2021:21:32:53 +0900] "GET /semi_project/index.jsp HTTP/1.1" 200 219
+0:0:0:0:0:0:0:1 - - [22/Jun/2021:21:32:54 +0900] "GET /semi_project/controller.do?command='menu1' HTTP/1.1" 200 -
+127.0.0.1 - - [22/Jun/2021:21:33:24 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [22/Jun/2021:21:33:25 +0900] "GET /semi_project/index.jsp HTTP/1.1" 200 219
+0:0:0:0:0:0:0:1 - - [22/Jun/2021:21:33:26 +0900] "GET /semi_project/controller.do?command='menu1' HTTP/1.1" 200 -
+127.0.0.1 - - [22/Jun/2021:21:34:30 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [22/Jun/2021:21:34:31 +0900] "GET /semi_project/index.jsp HTTP/1.1" 200 219
+0:0:0:0:0:0:0:1 - - [22/Jun/2021:21:34:31 +0900] "GET /semi_project/controller.do?command='menu1' HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [22/Jun/2021:21:42:26 +0900] "GET /semi_project/Protected.jsp HTTP/1.1" 200 3818

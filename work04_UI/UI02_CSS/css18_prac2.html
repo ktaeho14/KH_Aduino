@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style type="text/css">
+.div{
+    border: 1px skyblue solid;
+    width: 400px;
+    height: 500px;
+    border-radius: 1pt;
+    background-color: skyblue;
+}
+.part1{
+    margin: 20px;
+    border: 1px springgreen solid;
+    background-color: springgreen;
+}
+.part2{
+    margin: 20px;
+    border: 1px springgreen solid;
+    list-style-type: none;
+    background-color: springgreen;
+}
+.part3{
+    margin: 20px;
+    border: 1px springgreen solid;
+    list-style-type: none;
+    background-color: springgreen;
+}
+.part3,li{
+    display: inline-block;
+    
+}
+
+    </style>
+</head>
+<body>
+    <h1>Prac</h1>
+    
+    <div class="div">
+        <div class="part1">
+        <ul>Part1. 정보</ul>
+            <li>ID<input type="text" ></li>
+            <li>PW<input type="password" ></li>
+            <li>Grade<input type="text" placeholder="일반회원" ></li>
+        </div>
+        
+        <div class="part2">
+            <ul>Part2. 개인정보</ul>
+            <li>1.NAME<input type="text" value="5자미만" max="5"></li>
+            <li>2.MAIL<input type="email" value="abc@abcd.com"></li>
+        </div>
+
+        <div class="part3">
+            <ul>Part3. 코딩실력</ul>
+            <li><input type="checkbox" name="coding" class="co">상</li>
+            <li><input type="checkbox" name="coding" class="co">중</li>
+            <li><input type="checkbox" name="coding" class="co">하</li>
+        </div>
+    </div>
+
+    
+</body>
+</html>

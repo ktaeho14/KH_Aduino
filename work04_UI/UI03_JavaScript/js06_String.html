@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style type="text/css">
+    .area{
+        border: 1px solid red;
+        height: 500px;
+    }
+    .area2{
+        border: 1px solid red;
+        height: 250px;
+    }
+
+</style>
+
+<script type= "text/javascript">
+function showString(){
+    var str1="Apple Iphone";
+
+    var doc = document.getElementById("area1");
+
+    doc.innerHTML += "toUpperCase(): " + str1.toUpperCase()+"<br>";
+    doc.innerHTML += "toLowerCase(): " + str1.toLowerCase()+"<br>";
+    doc.innerHTML += "legnth(): " + str1.length + "<br>";
+
+    doc.innerHTML += "문자열에서 e의 위치:" +(str1.indexOf('e')+1)+"번째에 위치<br>";
+    doc.innerHTML += "뒤에서 부터 e의 위치: " +(str1.lastIndexOf('e')+1)+"번째에 위치<br>";
+
+    for(var i=0; i<str1.length; i++){
+        doc.innerHTML += i+"번쨰 인덱스: " + str1.charAt(i)+"<br>";
+    }
+
+    doc.innerHTML += "문자열 일부만 리털: " + str1.substring(8,10)+"<br>";
+
+    var str2 = "사과, 바나나, 복숭아, 키위, 파인애플";
+    var fruits =str2.split(",");
+
+    doc.innerHTML+= "str.split(): " + fruits +"<br>";
+    console.log(fruits); 
+
+
+}
+
+function testString(){
+    var str01 = "String";
+    var str02 = "Test";
+
+    // '+'연산자 사용
+    var str03 = str01+str02;
+    alert("String+ Test = " + str03);
+    //concat()
+    var str04 = str01.concat("Test","Java","Script");
+    alert("Concat: " + str04);
+
+    var str05 = ["5","10","15","20","25"].join("*");
+    alert(str05);
+
+    //
+    var num = 12.5;
+    var bool = true;
+    var res = "String"+num;
+    alert(res + ":"+typeof(res));
+}
+
+function testString2(){
+    var str=prompt("이름을 입력하세요: ");
+    var doc=document.getElementById("res");
+
+    // 동등연산자==
+    if(str.toLowerCase() == "kh"){
+        doc.innerHTML = str+"님, 환영합니다";
+    }else{
+        doc.innerHTML = "이름을 확인해 주세요";
+    }
+
+    //비교하는 자료형에 자동형 변환이 된다.
+    var numVal=10;
+    if(numVal == "10"){
+        alert("==연산자 사용: 숫자 10이 맞습니다");
+    }else{
+        alert("==연산자 사용: 숫자 10이 아닙니다.");
+    }
+    
+    //===(엄격한 비교)
+    var numVal=10;
+    if(numVal === "10"){
+        alert("===연산자 사용: 숫자 10이 맞습니다");
+    }else{
+        alert("===연산자 사용: 숫자 10이 아닙니다.");
+    }
+}
+
+
+</script>
+</head>
+<body>
+    <h1>String</h1>
+
+    <p>
+        "",''로 묶여 있는 리터럴<br>
+        자바스크립트의 내장객체로 String객체의 기본적인 메소드가 있다.
+    </p>
+    <button onclick="showString()">문자열 처리 메소드</button>
+    <div id="area1" class="area"></div>
+    <br>
+    <button onclick="testString();">문자열 처리 메소드2</button>
+    <br>
+    <button onclick="testString2();">문자열 처리 메소드3</button>
+    <div id="res" class="area2"></div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+    $(function(){
+        $("tr").on("click",function(){
+            if( !$(this).is($("tr:first")) ){
+                $("table tr").removeAttr("style");
+
+                $(this).css("background","orange");
+
+                var no = $(this).children().eq(0).text();
+                var title = $(this).children().eq(1).text();
+                var date = $(this).children().eq(2).text();
+
+                $("div").text(no+"/"+title+"/"+date);
+
+            }
+        });
+    });
+    
+    </script>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>NO</th>
+            <th>TITLE</th>
+            <th>DATE</th>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>11 TITLE</td>
+            <td>21-05-23</td>
+        </tr>
+        <tr>
+            <td>32</td>
+            <td>32 TITLE</td>
+            <td>21-05-24</td>
+        </tr>
+        <tr>
+            <td>59</td>
+            <td>59 TITLE</td>
+            <td>21-05-27</td>
+        </tr>
+    </table>
+    <div></div>
+</body>
+</html>

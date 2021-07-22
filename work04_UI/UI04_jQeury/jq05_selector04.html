@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+   $(function(){
+    $("#signal").submit(function(){
+        // alert("submit 발생!!"); 
+        // 잘 실행되는지 alert창을 통해서 확인하기
+        if( $(".infobox").val()==null || $(".infobox").val()==""){
+            $(".error").show();
+            return false;
+            /* 
+            창안에 원하는 값(ex : ij)을 입력버튼을 누르면 주소창안에
+            file:///C:/workspece/work04_UI/UI04_jQuery/jq05_selector04.html?userId=ij
+            끝 부분에 userId=ij 가 입력이 되며 값을 넣지 않고 입력버튼을 누르면
+            반드시 입력 하세요!!가 입력하는 값 창 옆에 출력된다
+            */
+         
+        }
+    });
+
+
+    $("#confirm").click(function(){
+        $("#result").empty();
+
+        if( $("input[name=chk]:checked").length == 0){
+            alert("하나 이상 선택해 주세요");
+        }else{
+            $("input[name=chk]:checked").each(function(i){
+                var chk = $("input[name=chk]:checked").eq(i);
+                var book = chk.next().text();
+                var price = chk.val();
+                $("#result").append(book + "가격 : " + price + "<br>");
+            });
+        }
+    });
+
+    $("input[name=chk").click(function(){
+        if( $("input[name=chk]").length == $("input[name=chk]:checked").length  ){
+            $("input[name=all]").prop("checked",true);
+        }else{
+            $("input[name=all]").prop("checked",false);
+        }
+    });
+
+
+
+});
+
+/*
+function allchk(all){
+    if($("input[name=all").prop("checked")){
+        $("input[name=chk]").prop("checked",true);
+    }else{
+        $("input[name=chk]").prop("checked",false);
+    }
+}
+*/
+
+function allchk(bool){
+    $("input[name=chk").each(function(){
+        $(this).prop("checked",bool);
+    });
+}
+
+
+
+        
+       
+    
+    </script>
+</head>
+<body>
+    <form id="signal" action="" method="">
+        <div>
+            <span class="label">User Id</span>
+            <input type="text" class="infobox" name="userId">
+            <span class="error" style="color: red; display: none;" >반드시 입력하세요!!</span>
+        </div>
+        <input type="submit" class="submit" value="입력">
+    </form>
+    <hr>
+    <fieldset style="width: 300px;">
+        <legend>체크여부확인</legend>
+            <input type="checkbox" name="all" onclick="allchk(this.checked);">전체선택<br>
+            <input type="checkbox" name="chk" value="20000"><b>java</b><br>
+            <input type="checkbox" name="chk" value="25000"><b>javascript</b><br>
+            <input type="checkbox" name="chk" value="30000"><b>Spring</b><br>
+
+            <input type="button" value="확인" id="confirm"><br>
+            <span>선택한 책 가격</span>
+            <div id="result"></div>
+
+    </fieldset>
+</body>
+</html>

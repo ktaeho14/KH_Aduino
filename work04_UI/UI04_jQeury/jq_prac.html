@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $(".copy").click(function(){
+           $(".copy").parent().clone($(".div1")).appendTo(".div2");
+        });
+    });
+
+    $(function(){
+        $(".delete").click(function(){
+            $(".delete").parent().remove("div");
+        });
+    });
+
+</script>
+
+
+<style type="text/css">
+.div1{
+    width: 200px;
+    height: 200px;
+    background-color: orangered;
+}
+</style>
+
+</head>
+<body>
+    <div class="div1">
+        <button class="copy">복사하기</button>
+        <button class="delete">삭제하기</button>
+    </div>
+
+    <div class="div2">
+
+    </div>
+</body>
+</html>

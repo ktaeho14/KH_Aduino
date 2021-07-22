@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+    <fieldset>
+        <legend>납품자 정보</legend>
+        <ol>
+        <li>&nbsp;납품자명 :&nbsp;<input type="text" name="name" placeholder="name"></li>
+        <li>&nbsp;email :&nbsp;<input type="email" name="email" placeholder="email"></li>
+        <li>&nbsp;홈페이지 :&nbsp;<input type="url" name="homepage" placeholder="http://"></li>
+        </ol>
+    </fieldset>
+
+    <fieldset>
+        
+        <legend>납품 정보</legend>
+        <ul>
+            <li>&nbsp;상품명 :&nbsp;<input type="text" name="productname"></li>
+            <li>&nbsp;납품수량 :&nbsp;<input type="number" name="productnum" placeholder="최소100" min="100"></li>
+            <li>&nbsp;납품등급 :&nbsp;<input type="range" name="productgrade"></li>
+            <li>&nbsp;기타사항 :&nbsp;<textarea cols="30" name="value"></textarea></li>
+        </ul>
+
+    </fieldset>
+    
+    <input type="submit" value="send message">
+    </form>
+</body>
+</html>

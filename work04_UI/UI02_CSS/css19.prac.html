@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style type="text/css">
+    #logo{
+        float: left;
+    }
+    #login{
+        float: right;
+    }
+    header>h1{
+        float: left;
+        text-align: center;
+        margin: 0 30%;
+    }
+    header > ul{
+        clear: both;
+        list-style-type : none;
+    }
+    header >ul>li{
+        display: inline-block;
+        margin-left : 10%;
+    }
+    .content{
+        width: 100%;
+        height: 400px;
+        background-color: slateblue;
+    }
+    footer{
+        width: 100%;
+        height: 700px;
+        padding-top: 3%;
+        background-color: skyblue;
+    }
+
+</style>
+</head>
+<body>
+    <header>
+        <img id="logo" src="UI02_CSS/image/img3.png" width="100px" height="100px">
+        <h1>M A I N</h1>
+        <form>
+            <table id="login">
+            <tr>
+                <th>ID</th>
+                <td><input type="text" name="id" id="id"></td>
+            </tr>
+            <tr>
+                <th>PW</th>
+                <td><input type="text" name="pw" id="pw"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="login">
+                    <input type="reset" value="reset">
+                </td>
+                    
+            </tr>
+            </table>
+        </form>
+        <ul>
+            <li>메인</li>
+            <li>공지사항</li>
+            <li>게시판</li>
+            <li>갤러리</li>
+            <li>회원관리</li>
+            <li>채팅</li>
+        </ul>    
+    </header>
+    <section class="content">Content Content</section>
+    <footer>
+        <p>Copyright !!@!@#!@!@!!@!~~@!</p>
+    </footer>
+</body>
+</html>

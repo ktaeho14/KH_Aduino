@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+    function click01(){
+        var val = $("input:text").val();
+        alert(val);
+    }
+
+    function click02(){
+        var val = $("input:radio").val();
+        alert(val);
+    }
+
+    function click03(){
+        var val = $("input:checkbox").val();
+        alert(val);
+    }
+
+    $(function(){
+        var selEle = document.getElementsByTagName("select")[0];
+
+        selEle.onchange = function(){
+            alert(selEle.options[selEle.selectedIndex].value+"의 인덱스 => "+ selEle.selectedIndex);
+        }
+    });
+
+    
+
+    </script>
+</head>
+<body>
+    <form>
+        <input type="text"  >
+        <input type="button" value="선택" onclick="click01();">
+        <input type="radio" value="21/02/19~" onclick="click02();">21년 2월 19일~
+        <input type="checkbox" value="디지털 콘텐츠와 웹 융합" onclick="click03();">디지털 콘텐츠
+        <br>
+        <select>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+    </form>
+</body>
+</html>

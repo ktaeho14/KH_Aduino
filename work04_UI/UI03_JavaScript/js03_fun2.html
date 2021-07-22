@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script type="text/javascript">
+    function func01(){
+        alert("명시적 함수");
+    }
+
+    var func02=function(){
+        alert("익명함수");
+    }
+
+    function func03(){
+        prn(function(msg){
+            alert(msg);
+        });
+    }
+
+    function prn(literal){
+        alert(literal);
+        literal("안녕하세요. 리터럴 입니다.");
+    }
+
+    //arguments
+    function valTest(){
+        var val="";
+        for(var i=0; i<arguments.length; i++){
+            val+=arguments[i]+" ";
+        }
+        alert(val);
+    }
+</script>
+
+</head>
+
+<body>
+    <h1>함수!!</h1>
+    <h2>함수의 종류</h2>
+    <p onclick="func01();"> 1.명시적 함수</p>
+    <p onclick="func02();"> 2.익명 함수</p>
+    <p onclick="func03();"> 3.리터럴 함수</p>
+
+    <h2 onclick="valTest('k','h','정보','교육원','s','강의장');">arguments 속성</h2>
+
+
+
+</body>
+</html>

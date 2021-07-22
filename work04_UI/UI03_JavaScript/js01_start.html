@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선언방식</title>
+<!-- 3. 외부 링크 -->
+<script type="text/javascript" src="js/test.js">
+
+</script>
+<!-- 2.내부 작성 방식 -->
+<script type="text/javascript">
+    function innerTest(){
+        var doc = document.getElementsByTagName("li")[1];
+        doc.style.color = "red";
+        doc.innerHTML="<b>글자가 바뀝니다</b>";
+    }
+
+    window.onload = function(){
+        alert("로딩 후!! 실행!!");
+        3번째 li 클릭 fuction(){
+            
+        }
+    }
+
+</script>
+</head>
+<body>
+    <h1>자바스크립트의 작성방식 3가지</h1>
+    <ol>
+        <!-- 1.inline -->
+        <li onclick="window.alert('inline');">inline 방식</li>
+        <li onclick="innerTest();">내부 작성 방식</li>
+        <li onclick="test();">외부 링크 방식</li>
+    </ol>
+</body>
+</html>

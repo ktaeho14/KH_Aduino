@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style type="text/css">
+    .area{
+        border: 2px solid red;
+        height: 200px;
+
+    }
+</style>
+
+<script type="text/javascript">
+    function methodTest1(){
+        var doc = document.getElementById("area1");
+
+        var arr1 = ['사과','딸기','바나나','파인애플','망고','키위','수박'];
+
+        doc.innerHTML += "바나나가 있는 인덱스: " + arr1.indexOf('바나나');
+    }
+
+    function methodTest2(){
+        var doc = document.getElementById("area2");
+
+        var arr1 = ['사과','딸기','바나나'];
+        var arr2 = ['파인애플','망고','키위','수박'];
+        var arr3 = arr1.concat(arr2);
+        var arr4 = arr2.concat(arr1);
+
+        doc.innerHTML+= "arr1: " + arr1 + "<br>";
+        doc.innerHTML+= "arr2: " + arr2 + "<br>";
+        doc.innerHTML+= "arr3: " + arr3 + "<br>";
+        doc.innerHTML+= "arr4: " + arr4 + "<br>";
+        
+    }
+
+    function methodTest3(){
+        var doc =document.getElementById("area3");
+        
+        var arr1=['피자','보쌈','떡볶이','연어회','뭉티기','먹태'];
+        var arr1Join = arr1.join();
+
+        doc.innerHTML += "arr1의 자료형: " + typeof(arr1)+"<br>";
+        doc.innerHTML += "arr1Join의 자료형: " + typeof(arr1Join)+"<br>";
+        doc.innerHTML += "arr1Join: " + arr1Join;
+    }
+
+    function methodTest4(){
+        var doc = document.getElementById("area4");
+        var arr = [1,2,3,4,5,6,7,8,9];
+        
+        doc.innerHTML += "arr: " + arr+"<br>";
+        
+        doc.innerHTML += "arrReverse: " + arr.reverse() + "<br>";
+        doc.innerHTML += "arr: " + arr+"<br>";
+
+        doc.innerHTml += "arrReverse: " + arr.reverse() + "<br>";
+    }
+
+    function methodTest5(){
+        var doc = document.getElementById("area5");
+        var arr = ['서초동','방배동','역삼동','삼성동'];
+
+
+        doc.innerHTML += "arr의 기본값: " + arr + "<br>";
+
+        arr.push('양재동');
+        
+        doc.innerHTML += "arr에 push: " + arr + "<br>";
+
+        arr.push('구의동');
+        doc.innerHTML += "arr에 push: " + arr + "<br>";
+
+        //
+        doc.innerHTML += "arr에 pop: " + arr.pop() + "<br>";
+        doc.innerHTML += "arr에 pop: " + arr + "<br>";
+       
+        doc.innerHTML += "arr에 pop: " + arr.pop() + "<br>";
+        doc.innerHTML += "arr에 pop: " + arr + "<br>";
+        
+    }
+
+    function methodTest6(){
+        var doc = document.getElementById("area6");
+        var arr = ['야구','축구','농구','배구','탁구'];
+
+        doc.innerHTML += "arr의 기본값: " + arr + "<br>";
+
+        doc.innerHTML += "arr에 shift: " + arr.shift() + "<br>";
+        doc.innerHTML += "shift 후 arr: " + arr + "<br>";
+        
+        doc.innerHTML += "arr에 unshift: " + arr.unshift('당구')+"<br>";
+        doc.innerHTML += "unshift 후 arr: " + arr + "<br>";
+        
+    }
+
+    function methodTest7(){
+        var doc = document.getElementById("area7")
+        var arr = ["자바","오라클","html","css","javascript"];
+
+        
+        doc.innerHTML += "arr의 기본값: " + arr + "<br>";
+        
+        //slice(시작인덱스, 종료인덱스)
+        doc.innerHTML += "slice 실행: " + arr.slice(2,4) + "<br>";
+        doc.innerHTML += "slice 후 arr" + arr + "<br>";
+
+        //splice(index,제거 수[,추가값])
+        //doc.innerHTML += "splice 실행: " + arr.splice(2,2) + "<br>";
+        doc.innerHTML += "splice 실행: " + arr.splice(2,2,'spring') + "<br>";
+        doc.innerHTML += "splice 후 arr" + arr + "<br>";
+
+        
+    }
+</script>
+
+</head>
+<body>
+    <h2>array객체의 메소드</h2>
+    <h4>indexOf(): 배열에서 요소가 위치한 인덱스 리턴</h4>
+    <div id="area1" class="area"></div>
+    <button onclick="methodTest1();">확인하기</button>
+
+    <hr>
+    <h4>concat(): 배열을 결합</h4>
+    <div id="area2" class="area"></div>
+    <button onclick="methodTest2();">확인하기</button>
+
+    <hr>
+    <h4>join(): 배열을 결합하여 문자열로 반환</h4>
+    <div id="area3" class="area"></div>
+    <button onclick="methodTest3();">확인하기</button>
+
+    <hr>
+    <h4>reverse(): 배열의 순서를 뒤집는다.</h4>
+    <div id="area4" class="area"></div>
+    <button onclick="methodTest4();">확인</button>
+
+    <hr>
+    <h4>push():배열의 맨 뒤에 요소 추가,pop():배열의 맨 뒤에 요소 제거</h4>
+    <div id="area5" class="area"></div>
+    <button onclick="methodTest5();">확인</button>
+
+    <hr>
+    <h4>shift(): 배열의 맨 앞에 요소 제거, unshift(): 배열의 맨 앞에 요소 추가</h4>
+    <div id="area6" class="area"></div>
+    <button onclick="methodTest6();">확인</button>
+
+    <hr>
+    <h4>slice(): 배열의 요소 선택 잘라내기, splice(): 배열의 index위치의 요소 제거 및 추가</h4>
+    <div id="area7" class="area"></div>
+    <button onclick="methodTest7();">확인</button>
+
+
+
+
+
+</body>
+</html>
